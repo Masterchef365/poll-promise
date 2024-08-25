@@ -264,7 +264,8 @@ impl<T: Send + 'static> Promise<T> {
         #[cfg(feature = "tokio")]
         {
             promise.join_handle = Some(tokio::task::spawn(async move {
-                sender.send(tokio::task::block_in_place(f));
+                //sender.send(tokio::task::block_in_place(f));
+                todo!();
             }));
         }
 
