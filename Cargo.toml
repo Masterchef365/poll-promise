@@ -53,7 +53,7 @@ smol = { version = "1.2.5", optional = true }
 static_assertions = "1.1"
 tokio = { version = "1", features = [
     "rt",
-    "rt-multi-thread",
+    #"rt-multi-thread",
     "sync",
     "macros",
 ], optional = true }
